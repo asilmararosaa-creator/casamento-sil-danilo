@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Silmara & Danilo — Lua de Mel</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="convite.jpg" alt="Convite Silmara e Danilo" class="convite-img">
+      <h1>Silmara <span class="amp">e</span> Danilo</h1>
+      <p class=" subtitle">Convidamos você com alegria para a celebração do nosso casamento</p>
+      <p class="date">22 de Fevereiro de 2026 — 12:00 às 17:00</p>
+      <p class="location">R. Saldanha Marinho, 259 — Santa Paula, São Caetano do Sul<br><strong>Victor's Buffet</strong></p>
+      <p class="rsvp-deadline">Confirme sua presença até 01/02/2026</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about">
+      <h2>Nossa Lua de Mel</h2>
+      <p>Seu carinho já é nosso maior presente. Se quiser nos ajudar a transformar nossa lua de mel em memória eterna, oferecemos cotas de contribuição abaixo — qualquer valor é muito bem-vindo.</p>
+    </section>
+
+    <section class="contribute">
+      <h3>Escolha uma cota</h3>
+
+      <div class="tiers">
+        <button class="tier-btn" data-value="100">Cota R$100</button>
+        <button class="tier-btn" data-value="200">Cota R$200</button>
+        <button class="tier-btn" data-value="500">Cota R$500</button>
+        <button class="tier-btn" data-value="custom">Valor personalizado</button>
+      </div>
+
+      <form id="contribForm" class="form">
+        <label>
+          Seu nome
+          <input type="text" id="name" required placeholder="Ex: Maria Silva">
+        </label>
+
+        <label>
+          E-mail (opcional)
+          <input type="email" id="email" placeholder="Ex: maria@email.com">
+        </label>
+
+        <label>
+          Valor (R$)
+          <input type="number" id="amount" min="1" step="0.01" required placeholder="Ex: 200">
+        </label>
+
+        <div class="pix-note">
+          <p><strong>PIX:</strong> <span id="pixKey">COLE_AQUI_SUA_CHAVE_PIX</span></p>
+          <p class="small">Ao pagar via PIX, por favor inclua seu nome na descrição para que possamos confirmar. Você também pode usar o botão "Registrar contribuição" se já pagou por outro canal.</p>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Registrar contribuição</button>
+          <button type="button" id="clearStored" class="btn-ghost">Limpar registros (local)</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="listings">
+      <h3>Contribuições registradas</h3>
+      <p class="small">Registros locais (não envia automaticamente): você pode exportar em CSV e verificar os pagamentos recebidos pelo banco/PIX.</p>
+
+      <div class="table-wrap">
+        <table id="contribTable">
+          <thead>
+            <tr><th>Nome</th><th>E-mail</th><th>Valor (R$)</th><th>Data/Hora</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="export-actions">
+        <button id="exportCsv" class="btn-primary">Exportar CSV</button>
+        <a id="downloadCsvLink" style="display:none"></a>
+      </div>
+    </section>
+
+    <section class="info">
+      <h3>Instruções rápidas</h3>
+      <ul>
+        <li>Pague usando o PIX com a chave acima e depois registre a contribuição aqui para controlarmos.</li>
+        <li>Também aceitamos transferências — registre o comprovante informando nome e valor.</li>
+        <li>Se preferir, escreva para: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a> (coloque seu e-mail real).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Obrigada por fazer parte desse dia especial 💛</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
